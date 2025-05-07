@@ -2,18 +2,25 @@ import React, { useState } from 'react'
 import './Formulario.css'
 
 export default function Formulario({listado,setListado}) {
-  let id = 0;
   const [item,setItem] = useState({
-    id: id,
+    id: 0,
     mascota: '',
     propietario:'',
     fecha:'',
     hora:'',
     sintomas:''
   })
+
   let guardarCita = () => {
-      id++;
-      setListado([...listado,item]);
+    console.log(item.id)
+    setItem({
+      ...item,
+      id: item.id +1
+    });
+    console.log("aca va el id")
+    console.log(item.id)
+    setListado([...listado,item]);
+
   }
 
   const handleChange = (e)=>{    

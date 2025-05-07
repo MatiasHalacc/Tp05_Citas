@@ -3,6 +3,8 @@ import Formulario from "./formulario"
 import Listadocitas from "./Listadocitas"
 function App() {
   const [listado, setListado] = useState([]);
+
+ 
   return (
     <> 
       <h1>ADMINISTRADOR DE PACIENTES</h1>
